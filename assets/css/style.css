@@ -24,10 +24,7 @@ h1 {
     background-color: #0dcaf0; 
 }
 
-/* Aumenta el tamaño del cajón de texto del input "mensaje" */
-.custom-textarea {
-    height: 150px; 
-}
+
 
 .custom-modal {
     color: black;

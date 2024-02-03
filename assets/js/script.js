@@ -18,6 +18,7 @@ $(document).ready(function () {
     });
 
 
+    /*Esta función genera el smooth scroll*/
     $('a[href^="#"]').on('click', function (event) {
         // Asegúrate de que this.hash tenga un valor antes de anular el comportamiento predeterminado
         if (this.hash !== '') {
