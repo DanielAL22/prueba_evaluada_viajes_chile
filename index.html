@@ -19,8 +19,7 @@
     <!--Importación Jquery-->
     <script src="assets/js/jquery-3.7.1.js"></script>
 
-    <!--Importación de nuestro script de JS-->
-    <script src="assets/js/script.js"></script>
+
 
     <!--Importación Font Awesome-->
     <script src="https://kit.fontawesome.com/0ffea1bd40.js" crossorigin="anonymous"></script>
@@ -30,6 +29,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
+    <!-- Plugin de validación de jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+    <!--Importación de nuestro script de JS-->
+    <script src="assets/js/script.js"></script>
+
+    
     <!--Importación CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -287,25 +294,25 @@
         <div class="container">
             <h1 class="text-center">CONTACTO</h1>
             <hr>
-            <form>
+            <form id="idFormulario" name="formulario">
                 <div class="mb-3">
-                    <label for="exampleInputNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="exampleInputNombre" aria-describedby="emailHelp">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="idNombre" aria-describedby="emailHelp" name="nombre">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputApellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="exampleInputApellido">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="idApellido" name="apellido">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputMensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="floatingTextarea2" style="height: 200px"></textarea>
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="idMensaje" style="height: 200px" name="mensaje"></textarea>
                 </div>
 
 
                 <!--MODAL-->
                 <!-- <button type="submit" class="btn btn-custom" data-bs-toggle="tooltip" data-bs-placement="top" title="Enviar información de contacto">Enviar</button> -->
                 <button type="submit" class="btn btn-custom" data-bs-placement="top" data-bs-target="#exampleModal"
-                    data-bs-toggle="tooltip" title="Este es un tooltip">Enviar</button>
+                    data-bs-toggle="tooltip" title="Este es un tooltip" id="confirmarEnvio1">Enviar</button>
 
                 <div class="modal fade custom-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -321,7 +328,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary btn-custom"
+                                <button type="submit" class="btn btn-primary btn-custom"
                                     id="confirmarEnvio">Enviar</button>
                             </div>
                         </div>
